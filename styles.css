@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eaeaea;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.judul {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.box h2 {
+  color: #007bff;
+  font-size: 1.5rem;
+}
+
+.box a {
+  text-decoration: none;
+  width: 150px;
+  text-align: center;
+  color: #fff;
+  background-color: blue;
+  padding: 10px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box a:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 900px) {
+  .judul {
+    font-size: 20px;
+  }
+  .box {
+    width: 750px;
+    padding: 15px;
+  }
+  .box h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 755px) {
+  .judul {
+    font-size: 15px;
+  }
+  .box {
+    width: 550px;
+    padding: 10px;
+  }
+  .box h2 {
+    font-size: 1.3rem;
+  }
+  .box a {
+    width: 130px;
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 555px) {
+  .judul {
+    font-size: 13px;
+  }
+  .box {
+    width: 350px;
+  }
+  .box h2 {
+    font-size: 1.2rem;
+  }
+  .box a {
+    width: 90px;
+    font-size: 10px;
+    padding: 6px;
+  }
+}

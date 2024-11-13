@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="html-quiz.css" />
+  </head>
+  <body>
+    <div class="judul">
+      <h1>JavaScript Quiz</h1>
+    </div>
+
+    <div class="quiz-container">
+      <form id="quizForm">
+        <div class="question">
+          <p>1. Apa itu JavaScript?</p>
+          <label><input type="radio" name="q1" value="a" /> Bahasa markup untuk halaman web</label><br />
+          <label><input type="radio" name="q1" value="b" /> Bahasa pemrograman untuk membuat interaksi di web</label><br />
+          <label><input type="radio" name="q1" value="c" /> Bahasa pemrograman untuk aplikasi desktop</label><br />
+        </div>
+
+        <div class="question">
+          <p>2. Bagaimana cara mendeklarasikan variabel di JavaScript?</p>
+          <label><input type="radio" name="q2" value="a" /> let myVariable;</label><br />
+          <label><input type="radio" name="q2" value="b" /> var myVariable;</label><br />
+          <label><input type="radio" name="q2" value="c" /> Semua jawaban benar</label><br />
+        </div>
+
+        <div class="question">
+          <p>3. Apa itu fungsi dalam JavaScript?</p>
+          <label><input type="radio" name="q3" value="a" /> Sebuah objek</label><br />
+          <label><input type="radio" name="q3" value="b" /> Sekumpulan instruksi yang bisa dipanggil berulang kali</label><br />
+          <label><input type="radio" name="q3" value="c" /> Sebuah array</label><br />
+        </div>
+
+        <div class="question">
+          <p>4. Bagaimana cara menulis komentar di JavaScript?</p>
+          <label><input type="radio" name="q4" value="a" /> // Ini komentar</label><br />
+          <label
+            ><input type="radio" name="q4" value="b" />
+            /* ini komentar */ </label
+          ><br />
+          <label><input type="radio" name="q4" value="c" /> # Ini komentar</label><br />
+        </div>
+
+        <div class="question">
+          <p>5. Apa hasil dari 5 + "5" di JavaScript?</p>
+          <label><input type="radio" name="q5" value="a" /> 55 (String)</label><br />
+          <label><input type="radio" name="q5" value="b" /> 10 (Number)</label><br />
+          <label><input type="radio" name="q5" value="c" /> Error</label><br />
+        </div>
+
+        <div class="question">
+          <p>6. Apa itu array di JavaScript?</p>
+          <label><input type="radio" name="q6" value="a" /> Tipe data untuk menyimpan satu nilai</label><br />
+          <label><input type="radio" name="q6" value="b" /> Tipe data untuk menyimpan beberapa nilai dalam satu variabel</label><br />
+          <label><input type="radio" name="q6" value="c" /> Tipe data untuk menyimpan objek</label><br />
+        </div>
+
+        <div class="question">
+          <p>7. Bagaimana cara membuat sebuah objek di JavaScript?</p>
+          <label><input type="radio" name="q7" value="a" /> let obj = {}; </label><br />
+          <label><input type="radio" name="q7" value="b" /> let obj = []; </label><br />
+          <label><input type="radio" name="q7" value="c" /> let obj = ""; </label><br />
+        </div>
+
+        <div class="question">
+          <p>8. Apa itu event dalam JavaScript?</p>
+          <label><input type="radio" name="q8" value="a" /> Fungsi untuk menghentikan eksekusi kode</label><br />
+          <label><input type="radio" name="q8" value="b" /> Peristiwa yang terjadi di browser (misalnya klik, scroll)</label><br />
+          <label><input type="radio" name="q8" value="c" /> Operator matematika</label><br />
+        </div>
+
+        <div class="question">
+          <p>9. Bagaimana cara membuat loop di JavaScript?</p>
+          <label><input type="radio" name="q9" value="a" /> for(;;) </label><br />
+          <label><input type="radio" name="q9" value="b" /> while(1) </label><br />
+          <label><input type="radio" name="q9" value="c" /> Semua jawaban benar</label><br />
+        </div>
+
+        <div class="question">
+          <p>10. Apa hasil dari pernyataan berikut: `typeof 42` di JavaScript?</p>
+          <label><input type="radio" name="q10" value="a" /> "number"</label><br />
+          <label><input type="radio" name="q10" value="b" /> "string"</label><br />
+          <label><input type="radio" name="q10" value="c" /> "boolean"</label><br />
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Kirim</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <!-- Tombol Kembali ke Home -->
+    <div class="tbl-keluar">
+      <a href="index.html">Home</a>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const answers = {
+          q1: "b",
+          q2: "c",
+          q3: "b",
+          q4: "a",
+          q5: "a",
+          q6: "b",
+          q7: "a",
+          q8: "b",
+          q9: "c",
+          q10: "a",
+        };
+
+        let score = 0;
+
+        // Loop through the questions to check answers
+        for (let question in answers) {
+          const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+          if (userAnswer && userAnswer.value === answers[question]) {
+            score++;
+          }
+        }
+
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `<h2>Skor Anda: ${score} dari ${Object.keys(answers).length}</h2>`;
+      }
+    </script>
+  </body>
+</html>

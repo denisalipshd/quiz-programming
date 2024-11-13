@@ -1,0 +1,59 @@
+body {
+  background-color: #eaeaea;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.judul {
+  text-align: center;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: red;
+}
+
+#result h2 {
+  color: green;
+  text-align: center;
+}
+
+.tbl-keluar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tbl-keluar a {
+  text-decoration: none;
+  color: #fff;
+  background-color: blue;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.tbl-keluar a:hover {
+  background-color: red;
+}
